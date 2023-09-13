@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <style>
+        .alert-box {
+            background-color: rgb(144, 152, 201);
+            color: blue;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box" id="btnbox">
+        <p id="tittle" >Alert 박스</p>
+        <button onclick="알림창('none');">닫기</button>
+    </div>
+
+    <button onclick="알림창1열기()">클릭1</button>
+    <button onclick="알림창2열기()">클릭2</button>
+
+
+    <script>
+
+
+        function 알림창1열기(){
+            // 1.제목 바꾸기
+            // document.getElementsByClassName('alert-box')[0];
+            document.getElementById('tittle').innerHTML = '아이디입력하세요';
+            // 2.알림창 열기
+            document.getElementById('btnbox').style.display = 'block';
+        }
+        function 알림창2열기(){
+            document.getElementById('tittle').innerHTML = '비번입력하세요';
+            document.getElementById('btnbox').style.display = 'block';
+        }
+        function 알림창(구멍){
+            document.getElementById('btnbox').style.display = 구멍;
+        }
+        //이벤트리스너
+        //이벤트명은 여러개가 있으니 구글참고
+        //지금 'click'이 들어가 있는 자리가 이벤트, 임
+        // document.getElementById('close').addEventListener('click', function(){
+        //document.getElementById('alert').style.display = 'none';
+        //})
+    </script>
+
+    
+</body>
+</html> 
